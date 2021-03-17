@@ -1,0 +1,39 @@
+void setup() {
+  // put your setup code here, to run once:
+ pinMode(13, OUTPUT);
+ pinMode(5, OUTPUT);
+  Serial.begin(9600);
+  //Serial.print("Blinking Bulb");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  //Serial.print("LED stat: ");
+  digitalWrite(13, HIGH);
+  digitalWrite(5,LOW);
+  delay(1000);
+  //Serial.print("LED stat: ");
+    if(digitalRead(13) == HIGH){
+    Serial.println("Green is High");
+  }else if(digitalRead(13) == LOW){
+    Serial.println("Green is Low");
+  }else if(digitalRead(5) == HIGH){
+    Serial.println("Red is high");
+  }
+  else(digitalRead(5) == LOW);{
+    Serial.println("Red is Low");
+    }
+  digitalWrite(13, LOW);
+  digitalWrite(5, HIGH);
+  delay(1000);
+  if(digitalRead(13) == HIGH){
+    Serial.println("Green is High");
+  }else if(digitalRead(13) == LOW){
+    Serial.println("Green is Low");
+  }else if(digitalRead(5) == HIGH){
+    Serial.println("Red is HIGH");
+  }
+  else(digitalRead(5) == LOW);{
+    Serial.println("Red is Low");
+  }
+  }
